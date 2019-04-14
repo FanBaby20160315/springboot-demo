@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fanbaby</groupId>
+    <artifactId>springboot-demo</artifactId>
+    <version>1.0.0</version>
+    <name>springboot-demo</name>
+    <packaging>pom</packaging>
+    <description>Demo project for Spring Boot</description>
+
+    <!-- 继承SpringBoot父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 子模块 -->
+    <modules>
+        <module>springboot-demo-api</module>
+        <module>springboot-demo-common</module>
+        <module>springboot-demo-dao</module>
+        <module>springboot-demo-service</module>
+        <module>springboot-demo-web</module>
+    </modules>
+
+    <!-- 变量设置 -->
+    <properties>
+        <java.version>1.8</java.version>
+        <sprigboot-demo.version>1.0.0</sprigboot-demo.version>
+        <sprigboot-demo-api.version>1.0.0-SNAPSHOT</sprigboot-demo-api.version>
+        <fastjson.versio>1.2.9</fastjson.versio>
+    </properties>
+
+    <!-- 统一管理依赖版本号 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fanbaby</groupId>
+                <artifactId>springboot-demo-api</artifactId>
+                <version>${sprigboot-demo-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fanbaby</groupId>
+                <artifactId>springboot-demo-common</artifactId>
+                <version>${sprigboot-demo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fanbaby</groupId>
+                <artifactId>springboot-demo-dao</artifactId>
+                <version>${sprigboot-demo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fanbaby</groupId>
+                <artifactId>springboot-demo-service</artifactId>
+                <version>${sprigboot-demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.versio}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springboot-demo</artifactId>
+        <groupId>com.fanbaby</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>springboot-demo-service</artifactId>
+    <version>${sprigboot-demo.version}</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fanbaby</groupId>
+            <artifactId>springboot-demo-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fanbaby</groupId>
+            <artifactId>springboot-demo-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fanbaby</groupId>
+            <artifactId>springboot-demo-dao</artifactId>
+        </dependency>
+    </dependencies>
+</project>
